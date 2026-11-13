@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdom of Light</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background:
+                    radial-gradient(circle at center, #263b70, #090d20 75%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .menu {
+            text-align: center;
+            width: 90%;
+            max-width: 650px;
+            padding: 40px;
+            background: rgba(10, 18, 45, 0.85);
+            border: 2px solid #70caff;
+            border-radius: 20px;
+            box-shadow: 0 0 35px #258cff;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: #b9eaff;
+            text-shadow: 0 0 20px #55baff;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #a9c9ff;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        button {
+            padding: 16px;
+            font-size: 18px;
+            color: white;
+            background: #173b72;
+            border: 1px solid #75caff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #287bc4;
+            box-shadow: 0 0 20px #54baff;
+            transform: scale(1.04);
+        }
+
+        #content {
+            margin-top: 25px;
+            color: #bceaff;
+            min-height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="menu">
+
+    <h1>KINGDOM OF LIGHT</h1>
+    <p class="subtitle">Defend the light. Protect the kingdom.</p>
+
+    <div class="buttons">
+        <button onclick="playGame()">PLAY</button>
+        <button onclick="showUnits()">UNITS</button>
+        <button onclick="showSettings()">SETTINGS</button>
+        <button onclick="showCredits()">CREDITS</button>
+    </div>
+
+    <div id="content">
+        Welcome, Guardian.
+    </div>
+
+</div>
+
+<script>
+
+    function playGame() {
+        document.getElementById("content").innerHTML =
+            "Loading game... Welcome to the battlefield!";
+    }
+
+    function showUnits() {
+        document.getElementById("content").innerHTML =
+            "Your units will appear here!";
+    }
+
+    function showSettings() {
+        document.getElementById("content").innerHTML =
+            "Settings: Audio | Graphics | Controls";
+    }
+
+    function showCredits() {
+        document.getElementById("content").innerHTML =
+            "Created by the Kingdom of Light development team.";
+    }
+
+</script>
+
+</body>
+</html>
